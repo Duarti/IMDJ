@@ -1,0 +1,617 @@
+*{
+    box-sizing: border-box;
+}
+
+@keyframes lineB {
+    from {
+        margin-top: -15vh;
+        height: 20vh;
+    }
+    to {
+        margin-top: -10vh;
+        height: 30vh;
+    }
+}
+
+@keyframes lineG {
+    from {
+        margin-top: 15vh;
+        height: 20vh;
+    }
+    to {
+        margin-top: 10vh;
+        height: 30vh;
+    }
+}
+
+@keyframes transition {
+    from {
+        margin-top: -20px;
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blur {
+    from{
+        filter: blur(50px);
+    }
+    to
+    {
+        filter: blur(0px);
+    }
+}
+
+@keyframes active{
+    from{
+        opacity: 0;
+        margin-top: 120px;
+    }
+    to
+    {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes disco {
+    from{
+        transform: rotate(0deg);
+        transform-origin: 200px 235px;
+    }
+    to
+    {
+        transform: rotate(360deg);
+        transform-origin: 200px 235px;
+    }
+}
+
+@keyframes agulha {
+    from{
+        transform: rotate(0deg);
+        transform-origin: top;
+    }
+    to{
+        transform: rotate(25deg);
+        transform-origin: top;
+    }
+}
+
+@keyframes carregando {
+    0%{
+        content: "Redirecionando.";
+    }
+    50%{
+        content: "Redirecionando..";
+    }
+    100%{
+        content: "Redirecionando...";
+    }
+}
+
+@keyframes marquee {
+    from{
+        margin-left: 110%;
+    }
+    to{
+        margin-left: -110%;
+    }
+}
+
+h1, h2, h3, h4, h5{
+    color: #17cc86;
+}
+
+.triangle:before{
+    display: inline-block;
+    content: " ";
+    border: 5px solid;
+    border-color: transparent #17cc86 #17cc86 transparent;
+}
+
+.has-success{
+    color: #17cc86;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .nav li > form > button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+#login {
+    background-image: url("../images/bg_login.png");
+    margin-top: 0px;
+    top: 0px;
+    animation: blur 0.2s ease forwards;
+}
+
+#login-box {
+    padding-top: 10%;
+}
+
+#login-box input {
+    border-radius: 0px;
+    background-color: #232323;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+    border-bottom: 3px solid #232323;
+    border-left: none;
+    border-right: none;
+    outline-color: #17cc86;
+    padding: 15px;
+}
+
+#login-box input:focus {
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #17cc86;
+    outline-color: #17cc86;
+}
+
+input[type=checkbox] {
+    opacity: 0;
+    margin-left: 5px;
+    margin-right: -20px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+input[type=checkbox] + span:before{
+    content: " ";
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #232323;
+    margin-left: -20px;
+    color: #17cc86;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked + span:before{
+    content: "♦";
+}
+
+#login-box label {
+    font-size: 20px;
+    width: 100%;
+}
+
+.btn{
+    font-size: 18px;
+}
+
+.btn-primary {
+    border-radius: 0px;
+    background-color: #17cc86;
+    border: 0px;
+    width: 100%;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:hover {
+    border-radius: 0px;
+    background-color: #10915f;
+    border: 0px;
+    width: 100%;
+}
+
+.btn-success {
+    border-radius: 0px;
+    background-color: whitesmoke;
+    border: 0px;
+    width: 100%;
+    color: #232323;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus, .btn-success:active:hover {
+    border-radius: 0px;
+    background-color: #ededed;
+    border: 0px;
+    width: 100%;
+    color: #232323;
+}
+
+.btn-default {
+    border-radius: 0px;
+    background-color: #232323;
+    border: 0px;
+    width: 100%;
+    color: #f7f7f7;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus {
+    border-radius: 0px;
+    background-color: #111111;
+    border: 0px;
+    width: 100%;
+    color: #f7f7f7;
+}
+
+#logo img {
+    display: inline-block;
+}
+
+#login #logo .lines {
+    display: inline-block;
+    margin-left: 25%;
+}
+
+#login #logo .lines .line {
+    display: inline-block;
+    width: 8px;
+    min-height: 50px;
+    height: 20vh;
+}
+
+#login #logo .lines #black {
+    background-color: #232323;
+    margin-top: -15vh;
+    position: absolute;
+    animation: lineB 1.2s ease forwards 0.3s;
+}
+
+#login #logo .lines #green {
+    background-color: #17cc86;
+    margin-top: 15vh;
+    margin-left: 12px;
+    position: absolute;
+    animation: lineG 1.2s ease forwards 0.3s;
+}
+
+#login .form{
+    display: none;
+}
+
+#login .active{
+    display: block;
+}
+
+#logo #logo-img {
+    text-align: center;
+    animation: transition 1.2s ease forwards;
+}
+
+#imgSelect{
+    background-color: #232323;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all 0.6s ease;
+}
+
+#imgSelect:hover{
+    background-color: #232323;
+    opacity: 0.6;
+}
+
+
+#imgSelect img{
+    max-width: 50px;
+}
+
+.transition{
+    animation: transition 1.2s ease forwards;
+}
+
+#home{
+    background-image: url("../images/bg_home.png");
+    display: block;
+    height: 100vh;
+    top:0;
+    box-sizing: border-box;
+}
+
+#home #top{
+    padding-top: 30px;
+}
+
+#home #top #logo img{
+    max-width: 50px;
+    display: inline-block;
+    margin-top: -80px;
+}
+
+#home #top #logo .lines{
+    display: inline-block;
+    margin-left: 10%;
+}
+
+#home #top #logo .lines .line{
+    min-height: 50px;
+    display: block;
+    width: 6px;
+}
+
+#home #top #logo .lines #black {
+    background-color: #232323;
+
+}
+
+#home #top #logo .lines #green {
+    background-color: #17cc86;
+    margin-left: 12px;
+
+}
+
+#user-menu, #user-menu ul{
+    list-style: none;
+}
+
+#user-menu{
+    font-size: 18px;
+}
+
+#user-menu li{
+    display: inline-block;
+}
+
+#user-menu ul{
+    display: none;
+    position: absolute;
+}
+
+#cadastro-form{
+    margin-top: -120px;
+    opacity: 0;
+}
+
+#user-image{
+    display: inline-block;
+    max-height: 80px;
+    max-width: 80px;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 4px solid #17cc86;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+#dropZone{
+    background-color: #232323;
+    padding: 10px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#dropZone p{
+    margin: 0px;
+}
+
+#dropZone h2{
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+#dropZone .error{
+    color: #d43f3a;
+}
+
+#user-dropdown:hover .triangle:before{
+    border-right-color: #0e7d52;
+    cursor: pointer;
+}
+
+#user-dropdown:hover ul{
+    display: block;
+    cursor: pointer;
+}
+
+#loading{
+    background-color: #17cc86;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#loading-content svg{
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    margin-top: calc(50vh - 300px);
+}
+
+#loading-content svg .disco{
+    animation: disco 2s infinite linear 1s;
+}
+
+#loading-content svg #agulha{
+    animation: agulha 1s ease forwards;
+}
+
+#loading-content #text:before{
+    animation: carregando 1s infinite linear;
+    display: block;
+    width: 200px;
+    height: 30px;
+    content: 'Redirecionando';
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+#fileUpload{
+    display: none;
+}
+
+.flex{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.flex .music{
+    background-color: #232323;
+    color: white;
+    font-size: 16px;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 234px;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.8s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex .music:hover{
+    background-color: #4e4e4e;
+    cursor: pointer;
+}
+
+.flex .music .nome{
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+#player{
+    margin-top: 30px;
+}
+
+#player #playingText{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#player #playingTitle{
+    font-size: 22px;
+    color: #17cc86;
+    margin-bottom: 0px;
+    width: 100%;
+    padding-left: 0;
+}
+
+#player #playingName{
+    font-size: 18px;
+    margin-top: 0px;
+    animation: marquee 5s linear infinite;
+    max-width: 150px;
+    padding: 10px;
+}
+
+#player #playingState{
+    width: 50px;
+    transition: all 0.6s ease;
+}
+
+#player #playingState:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}

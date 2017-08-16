@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPractice Area</title>
+	<script src="site.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<div class="dropArea" id="dropZone">
+	<h1> Drop your items here! </h1>
+	<p>Drop any item here for test WTF I did.Dra</p>
+</div>
+</body>
+</html>
